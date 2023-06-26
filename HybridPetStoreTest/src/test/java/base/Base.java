@@ -27,6 +27,7 @@ public class Base {
   @AfterMethod
   public void afterMethod() {
 	  driver.close();
+	  System.out.println("Testing Done");
   }
 
 }
