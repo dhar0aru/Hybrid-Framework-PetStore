@@ -16,7 +16,7 @@ public class Base {
   public void setup() {
 	  	WebDriverManager.chromedriver().setup();
 	  	driver = new ChromeDriver();
-		driver.get("https://petstore.octoperf.com/actions/Catalog.action");
+		driver.get("https://petstore.octoperf.com/");
 		driver.manage().window().maximize();
 		Reporter.log("Browser Maximized");
 		String OriginalTitle=driver.getTitle();
@@ -26,7 +26,8 @@ public class Base {
 
   @AfterMethod
   public void afterMethod() {
-	  driver.close();//testing
+	  driver.close();
+	  //System.out.println("Testing Done");
   }
 
 }
