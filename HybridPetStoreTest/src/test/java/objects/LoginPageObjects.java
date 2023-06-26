@@ -15,10 +15,10 @@ public class LoginPageObjects {
   }
   @FindBy(xpath="//input[@name='username']")
   WebElement UserName;
-  @FindBy(xpath="//input[@name='password']")
+  @FindBy(xpath="//input[@name='password' and @type='password' and @value='j2ee']")
   WebElement Password;
   
-  @FindBy(xpath="//input[@name='signon']")
+  @FindBy(xpath="//input[@name='signon' and @type='submit' and @value='Login']")
   WebElement LoginBtn;
   
   @FindBy(xpath="//a[text()='Register Now!']")

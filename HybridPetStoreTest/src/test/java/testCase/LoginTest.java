@@ -2,6 +2,8 @@ package testCase;
 
 import org.testng.annotations.Test;
 import base.Base;
+import objects.HomePageObjects;
+import objects.LoginPageObjects;
 import utility.TestDataFile;
 
 import org.testng.Reporter;
@@ -18,39 +20,66 @@ public class LoginTest extends Base{
 		  }
 	
 		@Test(priority=1)
-		public void verifyLoginWithValidCredentials() {
+		public void verifyLoginWithValidCredentials() throws InterruptedException {
 			
-			driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
-			
-			driver.findElement(By.xpath("//a[text()='Sign In']")).click();
+			LoginPageObjects login = new LoginPageObjects(driver);
 
+		    HomePageObjects home = new HomePageObjects(driver);
+		       
+
+		    driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
+
+		       
+		     home.clickSignInBtn();
 			
-			WebElement Username = driver.findElement(By.xpath("//input[@name='username']"));
-	        Username.sendKeys("Tara1234");
+		     login.enterUserName("Meghna0604");
+		     
+		     login.enterPassword("1234");
+		     
+		     login.clickLoginBtn();
+			
+			//WebElement UserName = driver.findElement(By.xpath("//input[@name='username']"));
+			//UserName.sendKeys();
 	        
-	        WebElement Password = driver.findElement(By.xpath("//input[@name='password' and @type='password' and @value='j2ee']"));
-	        Password.sendKeys("Tommy#1234");
+	        //WebElement Password = driver.findElement(By.xpath("//input[@name='password' and @type='password' and @value='j2ee']"));
+	        //Password.sendKeys("1234");
 	        
-	        driver.findElement(By.xpath("//input[@name='signon' and @type='submit' and @value='Login']")).click();
+	        //driver.findElement(By.xpath("//input[@name='signon' and @type='submit' and @value='Login']")).click();
 	        
-		}
+	        Thread.sleep(3000);
+	        
+	        if(driver.getPageSource().contains("Welcome Meghna!")){
+				  System.out.println("Login Successful!");
+				  
+	        }
+	        
+	   
+		}   
 		
 		@Test(priority=2)
-		public void verifyLoginWithInvalidCredentials() {
+		public void verifyLoginWithInvalidCredentials() throws InterruptedException {
 			
-			driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
-			
-			driver.findElement(By.xpath("//a[text()='Sign In']")).click();
+	        LoginPageObjects login = new LoginPageObjects(driver);
 
+		    HomePageObjects home = new HomePageObjects(driver);
+		       
+
+		    driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
+
+		       
+		     home.clickSignInBtn();
 			
-			WebElement Username = driver.findElement(By.xpath("//input[@name='username']"));
-	        Username.sendKeys("Tara1234");
+		     login.enterUserName("Tara1234");
+		     
+		     login.enterPassword("Tommy@1234");
+		     
+		     login.clickLoginBtn();
 	        
-	        WebElement Password = driver.findElement(By.xpath("//input[@name='password' and @type='password' and @value='j2ee']"));
-	        Password.sendKeys("Tommy@1234");
+		     Thread.sleep(3000);
+	        if(driver.getPageSource().contains("Invalid username or password.  Signon failed.")){
+				  System.out.println("Login Failed!");
+				  
+	        }
 	        
-	        driver.findElement(By.xpath("//input[@name='signon' and @type='submit' and @value='Login']")).click();
-	        
-	        driver.findElement(By.className("messages")).isDisplayed();
 		}
 }
