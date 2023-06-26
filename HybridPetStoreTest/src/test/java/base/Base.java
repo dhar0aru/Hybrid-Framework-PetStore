@@ -26,7 +26,7 @@ public class Base {
 
   @AfterMethod
   public void afterMethod() {
-	  driver.close();
+	  driver.close();//testing
   }
 
 }
