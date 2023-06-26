@@ -26,12 +26,7 @@ public class Base {
 
   @AfterMethod
   public void afterMethod() {
-<<<<<<< HEAD
 	  driver.close();//testing
-=======
-	  driver.close();
-	  System.out.println("Testing Done");
->>>>>>> branch 'master' of https://github.com/dhar0aru/Hybrid-Framework-PetStore
   }
 
 }
