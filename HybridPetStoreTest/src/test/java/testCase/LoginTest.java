@@ -1,18 +1,11 @@
 package testCase;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-
 import base.Base;
-import base.Base;
-import objects.HomePageObjects;
 import utility.TestDataFile;
 
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
-
-import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -23,7 +16,7 @@ public class LoginTest extends Base{
 		  { Object data[][]=TestDataFile.getTestData("Sheet1");
 		  	return data;	  
 		  }
-	public class Login extends Base {
+	
 		@Test(priority=1)
 		public void verifyLoginWithValidCredentials() {
 			
@@ -60,5 +53,4 @@ public class LoginTest extends Base{
 	        
 	        driver.findElement(By.className("messages")).isDisplayed();
 		}
-}
 }
