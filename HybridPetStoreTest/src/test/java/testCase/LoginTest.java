@@ -27,7 +27,7 @@ public class LoginTest extends Base{
 		    HomePageObjects home = new HomePageObjects(driver);
 		       
 
-		    driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
+		   // driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
 
 		       
 		     home.clickSignInBtn();
@@ -64,7 +64,7 @@ public class LoginTest extends Base{
 		    HomePageObjects home = new HomePageObjects(driver);
 		       
 
-		    driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
+		   // driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
 
 		       
 		     home.clickSignInBtn();

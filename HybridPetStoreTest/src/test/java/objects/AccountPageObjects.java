@@ -88,7 +88,7 @@ public class AccountPageObjects {
 	  Country.sendKeys(country);
   }
   public void clickSubmitBtn() {
-	  SubmitBtn.submit();
+	  SubmitBtn.click();
   }
   
   

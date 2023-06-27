@@ -31,7 +31,7 @@ public class AccountRegistration extends Base {
        HomePageObjects home = new HomePageObjects(driver);
        
 
-       driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
+      // driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
 
        
 
@@ -112,7 +112,7 @@ public class AccountRegistration extends Base {
        HomePageObjects home = new HomePageObjects(driver);
        
 
-       driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
+      // driver.findElement(By.xpath("//a[text()='Enter the Store']")).click();
 
        
 

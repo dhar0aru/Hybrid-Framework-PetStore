@@ -28,14 +28,16 @@ public class LoginPageObjects {
 
   
   public void enterUserName(String userName) {
+	  UserName.clear();
 	  UserName.sendKeys(userName);
   }
   public void enterPassword(String password) {
+	  Password.clear();
 	  Password.sendKeys(password);
   }
   
   public void clickLoginBtn() {
-	  LoginBtn.submit();
+	  LoginBtn.click();
   }
   
   public void clickRegisterBtn() {

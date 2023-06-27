@@ -91,6 +91,12 @@
 		<scope>test</scope>
 	</dependency>
 	<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>4.1.5</version>
+	</dependency>
+
+	<dependency>
 		<groupId>HybridFramework</groupId>
 		<artifactId>HybridFramework</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
